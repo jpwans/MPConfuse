@@ -23,7 +23,7 @@ A support code obfuscation for iOS or macOS
 * 点击左上角"+"选择New Run Script Phase
 * 添加"$PROJECT_DIR/MPConfuseClasses/confuse.sh"到空白区域（不包含引号）
 ### 第五步 编译
-* COMMAND+B 编译 查看codeObfuscation.h 时候发生变化 
+* COMMAND+B 编译 查看codeObfuscation.h内容是否发生变化 
 
 ## Test 测试方法
 * 安装 Class-dump[下载地址](http://stevenygard.com/projects/class-dump/)
