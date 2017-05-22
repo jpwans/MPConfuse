@@ -5,7 +5,7 @@ A support code obfuscation for iOS or macOS
 * 支持指定的前缀方法的混淆达到加密效果
 * 支持属性的混淆
 * 支持自定义方法或者属性的混淆
-* 不入侵代码
+* 如果要达到混淆的效果多写点闭包（block），用函数式编程，天生就是混淆
 
 ## Usage 使用方法
 ### 第一步 
