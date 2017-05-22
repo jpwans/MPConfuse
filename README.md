@@ -1,6 +1,10 @@
 # MPConfuse
 A support code obfuscation for iOS or macOS
 
+## Description 描述
+* 支持指定的方法的混淆达到加密效果
+* 暂时适用于指定方法的加密
+
 ## Usage 使用方法
 ### 第一步 
 * 将子文件夹MPConfuseClasses拖入到项目根目录中（Pods同级目录）。
