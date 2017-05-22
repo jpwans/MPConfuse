@@ -16,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self mp_start];
 }
 
 
@@ -25,7 +26,7 @@
 }
 
 - (void)mp_start{
-    
+    NSLog(@"1");
 }
 
 - (void)mp_end{

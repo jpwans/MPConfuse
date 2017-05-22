@@ -18,13 +18,13 @@ FUNC_PREFIX="mp_"
 #保存的数据表名称
 TABLENAME=symbols
 #保存的数据表路径
-SYMBOL_DB_FILE="$PROJECT_DIR/Resource/symbols"
+SYMBOL_DB_FILE="$PROJECT_DIR/MPConfuseClasses/symbols"
 #混淆的方法名称列表
-STRING_SYMBOL_FILE="$PROJECT_DIR/Resource/func.list"
+STRING_SYMBOL_FILE="$PROJECT_DIR/MPConfuseClasses/func.list"
 #混淆的项目目录
 CONFUSE_FILE="$PROJECT_DIR/"
 #生成代码混淆的结果宏定义文件
-HEAD_FILE="$PROJECT_DIR/Resource/codeObfuscation.h"
+HEAD_FILE="$PROJECT_DIR/MPConfuseClasses/codeObfuscation.h"
 #####################General config end##############################
 
 

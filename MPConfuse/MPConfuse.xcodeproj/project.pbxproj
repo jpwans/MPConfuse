@@ -14,6 +14,9 @@
 		A45D7C7F1ED29CE2005D755B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A45D7C7E1ED29CE2005D755B /* Assets.xcassets */; };
 		A45D7C821ED29CE2005D755B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45D7C801ED29CE2005D755B /* LaunchScreen.storyboard */; };
 		A45D7CA21ED2B99E005D755B /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A45D7CA11ED2B99E005D755B /* Test.m */; };
+		A48EA9A31ED2C6D700F37FE2 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = A48EA99F1ED2C6D700F37FE2 /* confuse.sh */; };
+		A48EA9A41ED2C6D700F37FE2 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = A48EA9A01ED2C6D700F37FE2 /* func.list */; };
+		A48EA9A51ED2C6D700F37FE2 /* symbols in Resources */ = {isa = PBXBuildFile; fileRef = A48EA9A21ED2C6D700F37FE2 /* symbols */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,11 @@
 		A45D7C831ED29CE2005D755B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A45D7CA01ED2B99E005D755B /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		A45D7CA11ED2B99E005D755B /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		A48EA99E1ED2C6D700F37FE2 /* codeObfuscation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codeObfuscation.h; sourceTree = "<group>"; };
+		A48EA99F1ED2C6D700F37FE2 /* confuse.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = confuse.sh; sourceTree = "<group>"; };
+		A48EA9A01ED2C6D700F37FE2 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
+		A48EA9A11ED2C6D700F37FE2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A48EA9A21ED2C6D700F37FE2 /* symbols */ = {isa = PBXFileReference; lastKnownFileType = file; path = symbols; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 		A45D7C661ED29CE2005D755B = {
 			isa = PBXGroup;
 			children = (
+				A48EA99D1ED2C6D700F37FE2 /* MPConfuseClasses */,
 				A45D7C711ED29CE2005D755B /* MPConfuse */,
 				A45D7C701ED29CE2005D755B /* Products */,
 			);
@@ -92,6 +101,18 @@
 			path = Class;
 			sourceTree = "<group>";
 		};
+		A48EA99D1ED2C6D700F37FE2 /* MPConfuseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A48EA99E1ED2C6D700F37FE2 /* codeObfuscation.h */,
+				A48EA99F1ED2C6D700F37FE2 /* confuse.sh */,
+				A48EA9A01ED2C6D700F37FE2 /* func.list */,
+				A48EA9A11ED2C6D700F37FE2 /* PrefixHeader.pch */,
+				A48EA9A21ED2C6D700F37FE2 /* symbols */,
+			);
+			path = MPConfuseClasses;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,7 +123,7 @@
 				A45D7C6B1ED29CE2005D755B /* Sources */,
 				A45D7C6C1ED29CE2005D755B /* Frameworks */,
 				A45D7C6D1ED29CE2005D755B /* Resources */,
-				A45D7C9A1ED29EDF005D755B /* ShellScript */,
+				A45D7C9A1ED29EDF005D755B /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -152,8 +173,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48EA9A51ED2C6D700F37FE2 /* symbols in Resources */,
 				A45D7C821ED29CE2005D755B /* LaunchScreen.storyboard in Resources */,
+				A48EA9A41ED2C6D700F37FE2 /* func.list in Resources */,
 				A45D7C7F1ED29CE2005D755B /* Assets.xcassets in Resources */,
+				A48EA9A31ED2C6D700F37FE2 /* confuse.sh in Resources */,
 				A45D7C7D1ED29CE2005D755B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,18 +185,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A45D7C9A1ED29EDF005D755B /* ShellScript */ = {
+		A45D7C9A1ED29EDF005D755B /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = $PROJECT_DIR/Resource/confuse.sh;
+			shellScript = $PROJECT_DIR/MPConfuseClasses/confuse.sh;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -308,7 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NVNN92W5Y2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = $PROJECT_DIR/Resource/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = $PROJECT_DIR/MPConfuseClasses/PrefixHeader.pch;
 				INFOPLIST_FILE = MPConfuse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eegsmart.MPConfuse;
@@ -322,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NVNN92W5Y2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = $PROJECT_DIR/Resource/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = $PROJECT_DIR/MPConfuseClasses/PrefixHeader.pch;
 				INFOPLIST_FILE = MPConfuse/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eegsmart.MPConfuse;
@@ -349,6 +374,7 @@
 				A45D7C881ED29CE2005D755B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
