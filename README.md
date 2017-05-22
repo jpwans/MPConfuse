@@ -2,7 +2,9 @@
 A support code obfuscation for iOS or macOS
 
 ## Description 描述
-* 支持指定的方法和属性的混淆达到混淆加密效果
+* 支持指定的前缀方法的混淆达到加密效果
+* 支持属性的混淆
+* 支持自定义方法或者属性的混淆
 * 不入侵代码
 
 ## Usage 使用方法
