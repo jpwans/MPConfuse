@@ -2,8 +2,9 @@
 A support code obfuscation for iOS or macOS
 
 ## Description 描述
-* 支持指定的方法的混淆达到加密效果
-* 暂时适用于指定方法的加密
+* 支持指定的方法的混淆达到混淆加密效果
+* 暂时适用于指定前缀方法的混淆
+* 不入侵代码
 
 ## Usage 使用方法
 ### 第一步 
@@ -17,7 +18,7 @@ A support code obfuscation for iOS or macOS
 * 点击Projiect->TARGETS->Build Settings 搜索"Prefix Header"
 * 找到Prefix Header输入"$PROJECT_DIR/MPConfuseClasses/PrefixHeader.pch"（不包含引号）
 * 将Precompile Prefix Header 设置为YES （提高编译速度）
-
+* 如果自带PCH文件 可以将 codeObfuscation.h导入到PCH文件即可
 ### 第四步 添加Run Script
 * 点击Projiect->TARGETS->Build Phases 
 * 点击左上角"+"选择New Run Script Phase
