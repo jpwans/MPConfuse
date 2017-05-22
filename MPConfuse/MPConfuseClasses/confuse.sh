@@ -21,6 +21,8 @@ TABLENAME=symbols
 SYMBOL_DB_FILE="$PROJECT_DIR/MPConfuseClasses/symbols"
 #混淆的方法名称列表
 STRING_SYMBOL_FILE="$PROJECT_DIR/MPConfuseClasses/func.list"
+#混淆方法的属性列表
+STRING_PROPERTY_SYMBOL_FILE="$PROJECT_DIR/MPConfuseClasses/property.list"
 #混淆的项目目录
 CONFUSE_FILE="$PROJECT_DIR/"
 #生成代码混淆的结果宏定义文件
@@ -52,6 +54,11 @@ export LC_CTYPE=C
 #删掉以init开头的行>写进STRING_SYMBOL_FILE
 grep -h -r -I  "^[-+]" $CONFUSE_FILE  --include '*.[mh]' |sed "s/[+-]//g"|sed "s/[();,: *\^\/\{]/ /g"|sed "s/[ ]*</</"| sed "/^[ ]*IBAction/d"|awk '{split($0,b," "); print b[2]; }'| sort|uniq |sed "/^$/d"|sed -n "/^$FUNC_PREFIX/p" >$STRING_SYMBOL_FILE
 
+#如果有想混淆不指定的方法或属性
+#注释上面一行
+#清空func.list和property.list
+#自定义添加指定的方法和属性按照单个换行的格式即可
+
 #数据表相关方便作排重
 createTable()
 {
@@ -81,6 +88,8 @@ createTable
 touch $HEAD_FILE
 echo -e "#ifndef $FULL_CODEOBFUSCATION \n#define $FULL_CODEOBFUSCATION" >> $HEAD_FILE
 echo "//confuse string at `date`" >> $HEAD_FILE
+
+#混淆方法
 cat "$STRING_SYMBOL_FILE" | while read -ra line; do
 if [[ ! -z "$line" ]]; then
 ramdom=`ramdomString`
@@ -89,6 +98,17 @@ insertValue $line $ramdom
 echo "#define $line $ramdom" >> $HEAD_FILE
 fi
 done
+
+#混淆属性
+cat "$STRING_PROPERTY_SYMBOL_FILE" | while read -ra line; do
+if [[ ! -z "$line" ]]; then
+ramdom=`ramdomString`
+echo $line $ramdom
+insertValue $line $ramdom
+echo "#define $line $ramdom" >> $HEAD_FILE
+fi
+done
+
 echo "#endif" >> $HEAD_FILE
 
 sqlite3 $SYMBOL_DB_FILE .dump

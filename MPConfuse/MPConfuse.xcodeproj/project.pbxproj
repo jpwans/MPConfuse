@@ -17,6 +17,7 @@
 		A48EA9A31ED2C6D700F37FE2 /* confuse.sh in Resources */ = {isa = PBXBuildFile; fileRef = A48EA99F1ED2C6D700F37FE2 /* confuse.sh */; };
 		A48EA9A41ED2C6D700F37FE2 /* func.list in Resources */ = {isa = PBXBuildFile; fileRef = A48EA9A01ED2C6D700F37FE2 /* func.list */; };
 		A48EA9A51ED2C6D700F37FE2 /* symbols in Resources */ = {isa = PBXBuildFile; fileRef = A48EA9A21ED2C6D700F37FE2 /* symbols */; };
+		A48EA9A71ED2D24800F37FE2 /* property.list in Resources */ = {isa = PBXBuildFile; fileRef = A48EA9A61ED2D24800F37FE2 /* property.list */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A48EA9A01ED2C6D700F37FE2 /* func.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = func.list; sourceTree = "<group>"; };
 		A48EA9A11ED2C6D700F37FE2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A48EA9A21ED2C6D700F37FE2 /* symbols */ = {isa = PBXFileReference; lastKnownFileType = file; path = symbols; sourceTree = "<group>"; };
+		A48EA9A61ED2D24800F37FE2 /* property.list */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = property.list; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				A48EA9A01ED2C6D700F37FE2 /* func.list */,
 				A48EA9A11ED2C6D700F37FE2 /* PrefixHeader.pch */,
 				A48EA9A21ED2C6D700F37FE2 /* symbols */,
+				A48EA9A61ED2D24800F37FE2 /* property.list */,
 			);
 			path = MPConfuseClasses;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				A48EA9A51ED2C6D700F37FE2 /* symbols in Resources */,
 				A45D7C821ED29CE2005D755B /* LaunchScreen.storyboard in Resources */,
 				A48EA9A41ED2C6D700F37FE2 /* func.list in Resources */,
+				A48EA9A71ED2D24800F37FE2 /* property.list in Resources */,
 				A45D7C7F1ED29CE2005D755B /* Assets.xcassets in Resources */,
 				A48EA9A31ED2C6D700F37FE2 /* confuse.sh in Resources */,
 				A45D7C7D1ED29CE2005D755B /* Main.storyboard in Resources */,

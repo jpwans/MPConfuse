@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface Test : NSObject
-
+@property (assign, nonatomic) NSString *abc;
 @end
