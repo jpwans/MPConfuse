@@ -36,8 +36,3 @@ A support code obfuscation for iOS or macOS
 * WeChat : wzw351420450
 * Email : mopellet@foxmail.com
 * Resume : [个人简历](https://github.com/MoPellet/Resume)
-
-## 联系方式:
-* WeChat : wzw351420450
-* Email : mopellet@foxmail.com
-* Resume : [个人简历](https://github.com/MoPellet/Resume)
