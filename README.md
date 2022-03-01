@@ -34,7 +34,3 @@ A support code obfuscation for iOS or macOS
 * /heads是存放dump出来头文件的文件夹路径
 * 查看/heads目录的指定头文件的方法名即可
 
-## 联系方式:
-* WeChat : wzw351420450
-* Email : mopellet@foxmail.com
-* Resume : [个人简历](https://github.com/MoPellet/Resume)
